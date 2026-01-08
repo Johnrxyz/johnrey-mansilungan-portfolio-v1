@@ -1,4 +1,6 @@
-import React from 'react';
+import aaronImg from '../assets/aaron.png';
+import meImg from '../assets/me.png';
+import aslImg from '../assets/asl.png';
 
 const WebsiteCard = ({ title, description, image, techStack, link }) => (
     <a href={link} target="_blank" rel="noopener noreferrer" className="block group">
@@ -36,21 +38,21 @@ const Websites = () => {
             description: "A minimalist portfolio built for an artist.",
             techStack: ["React", "Tailwind CSS", "Vite", "DJango Rest Framework", "Cloudinary"],
             link: "https://aaronocaya.netlify.app/",
-            image: 'src/assets/aaron.png'
+            image: aaronImg
         },
         {
             title: "My Portfolio Website",
             description: "A minimalist portfolio built for myself as a video editor/web developer, focusing on performance and clarity.",
             techStack: ["React", "Tailwind CSS", "Vite"],
             link: "#",
-            image: 'src/assets/me.png'
+            image: meImg
         },
         {
             title: "Armor Sin Limites - E-Commerce Website [in progress]",
             description: "An e-commerce website built for a clothing brand. (preview coming soon)",
             techStack: ["React", "Tailwind CSS", "Vite", "DJango Rest Framework", "Cloudinary", "PayMongo", "PostgreSQL", "Brevo", "Railway"],
             link: "#",
-            image: 'src/assets/asl.png'
+            image: aslImg
         },
     ];
 
