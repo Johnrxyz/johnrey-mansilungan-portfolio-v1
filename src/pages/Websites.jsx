@@ -44,7 +44,7 @@ const Websites = () => {
             title: "My Portfolio Website",
             description: "A minimalist portfolio built for myself as a video editor/web developer, focusing on performance and clarity.",
             techStack: ["React", "Tailwind CSS", "Vite"],
-            link: "#",
+            link: "https://notrye.netlify.app/",
             image: meImg
         },
         {

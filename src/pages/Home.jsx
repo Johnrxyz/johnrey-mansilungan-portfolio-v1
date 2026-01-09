@@ -6,6 +6,8 @@ import Services from '../components/home/Services';
 import About from '../components/home/About';
 import Contact from '../components/home/Contact';
 
+import Testimonials from '../components/home/Testimonials';
+
 const Home = () => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -26,6 +28,7 @@ const Home = () => {
             <Hero />
             <Showreel />
             <Services />
+            <Testimonials />
             <About />
             <Contact />
         </>

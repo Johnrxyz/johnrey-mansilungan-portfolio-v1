@@ -22,9 +22,12 @@ const Contact = () => {
 
                     <div className="flex gap-4 mt-4">
                         {/* Optional links as requested */}
-                        <a href="" className="text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Upwork</a>
+                        <a href="https://www.instagram.com/rye.drp/" target="_blank" className="text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Instagram</a>
                         <span className="text-slate-300 dark:text-neutral-700">•</span>
-                        <a href="" className="text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">OnlineJobsPH</a>
+                        <a href="https://www.facebook.com/whoscutt1ngonions" target="_blank" className="text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Facebook</a>
+                        {/* <a href="" className="text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">Upwork</a>
+                        <span className="text-slate-300 dark:text-neutral-700">•</span>
+                        <a href="" className="text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">OnlineJobsPH</a> */}
                     </div>
 
                     <div className="mt-8">

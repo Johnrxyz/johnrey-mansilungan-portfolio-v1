@@ -33,7 +33,7 @@ const Services = () => {
     ];
 
     return (
-        <section className="py-20 md:py-32 relative">
+        <section className="md:py-15 relative">
             {/* <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-slate-200 dark:bg-dark-card rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div> */}
 
             <div className="container mx-auto px-4 max-w-6xl relative z-10">

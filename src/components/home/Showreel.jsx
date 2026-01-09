@@ -40,7 +40,7 @@ const Showreel = () => {
                     {/* Content */}
                     <div className="flex flex-col gap-6 text-center lg:text-left lg:order-2">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
-                            Website Developed
+                            Web Developer
                         </h2>
                         <p className="text-lg text-slate-600 dark:text-neutral-300">
                             Beyond video editing, I build clean, performant websites using modern technologies.
