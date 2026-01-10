@@ -41,9 +41,9 @@ const Videos = () => {
             />
 
             <VideoSection
-                title="Podcast & Long-Form"
-                description="Narrative-driven edits for YouTube and platforms."
-                videos={longFormVideos}
+                title="Short Films"
+                description="Focused concept, relatable characters, a tight script, strong visual storytelling, effective sound/music, clean editing, and a powerful ending that delivers a clear theme and emotional impact."
+                videos={shortFilms}
                 type="grid"
             />
 
@@ -53,10 +53,11 @@ const Videos = () => {
                 videos={trailerVideos}
                 type="grid"
             />
+
             <VideoSection
-                title="Short Films"
-                description="Short films."
-                videos={shortFilms}
+                title="Podcast & Long-Form"
+                description="Narrative-driven edits for YouTube and platforms."
+                videos={longFormVideos}
                 type="grid"
             />
         </>
