@@ -11,10 +11,13 @@ const Videos = () => {
     ];
 
     const trailerVideos = [
-        { title: "ALAS", description: "Cinematic color grading, fast-paced editing, and sound design.", videoId: "HP6v-T78YvA" },
+        { title: "ALAS (2025) - Trailer", description: "VFX, Cinematic color grading, fast-paced editing, and sound design.", videoId: "HP6v-T78YvA" },
+        { title: "KALOY - Music Video", description: "Cinematic color grading, fast-paced editing, music video", videoId: "agbqhbSVZYo" },
+        { title: "ENCOMIENDA SYSTEM (2023) - Trailer", description: "Cinematic color grading, fast-paced editing, sound design, trailer", videoId: "z05GsBQIL8Y" },
     ];
     const shortFilms = [
-        { title: "A VERY SPECIAL BUSINESS", description: "Cinematic color grading and sound design.", videoId: "8MeiCdjfaJI" },
+        { title: "ALAS (2025) - Full Short Film", description: "VFX-filled, Cinematic color grading, fast-paced editing, and sound design.", videoId: "rhkhQFhyap0" },
+        { title: "A VERY SPECIAL BUSINESS (2023)", description: "Cinematic color grading and sound design.", videoId: "8MeiCdjfaJI" },
     ];
 
     return (

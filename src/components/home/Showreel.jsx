@@ -37,7 +37,24 @@ const Showreel = () => {
 
                 <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
 
-                    <div className="lg:col-span-7 w-full order-1">
+                    <div className="lg:col-span-5 flex flex-col gap-6 text-center lg:text-left order-1 lg:order-2">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
+                            Web Developer
+                        </h2>
+                        <p className="text-lg text-slate-600 dark:text-neutral-300">
+                            Beyond video editing, I build clean, performant websites using modern technologies.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                            <Link to="/websites">
+                                <Button variant="primary" className="w-full sm:w-auto">View Projects</Button>
+                            </Link>
+                            <button onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+                                <Button variant="secondary" className="w-full sm:w-auto">Contact Me</Button>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="lg:col-span-7 w-full order-2 lg:order-1">
                         <div
                             onClick={() => navigate('/websites')}
                             className="aspect-video bg-neutral-100 dark:bg-dark-bg overflow-hidden shadow-2xl ring-1 ring-slate-900/10 relative cursor-pointer group hover:scale-[1.01] transition-transform duration-500"
@@ -63,23 +80,16 @@ const Showreel = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
-                    </div>
 
-                    <div className="lg:col-span-5 flex flex-col gap-6 text-center lg:text-left order-2">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
-                            Web Developer
-                        </h2>
-                        <p className="text-lg text-slate-600 dark:text-neutral-300">
-                            Beyond video editing, I build clean, performant websites using modern technologies.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                            <Link to="/websites">
-                                <Button variant="primary" className="w-full sm:w-auto">View Projects</Button>
-                            </Link>
-                            <button onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
-                                <Button variant="secondary" className="w-full sm:w-auto">Contact Me</Button>
-                            </button>
+                            <div className="absolute top-4 right-4 z-20 flex gap-2">
+                                {websites.map((_, index) => (
+                                    <div
+                                        key={index}
+                                        className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-white w-4' : 'bg-white/40'
+                                            }`}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
 
