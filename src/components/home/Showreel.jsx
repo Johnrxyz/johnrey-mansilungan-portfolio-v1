@@ -105,7 +105,7 @@ const Showreel = () => {
                     <div className="lg:col-span-7 w-full order-2 lg:order-1">
                         <div
                             onClick={() => navigate('/websites')}
-                            className="aspect-video bg-neutral-100 dark:bg-dark-bg overflow-hidden shadow-2xl rounded-2xl ring-1 ring-slate-900/10 relative cursor-pointer group hover:scale-[1.01] transition-transform duration-500"
+                            className="aspect-video bg-neutral-100 dark:bg-dark-bg overflow-hidden shadow-2xl ring-1 ring-slate-900/10 relative cursor-pointer group hover:scale-[1.01] transition-transform duration-500"
                             title="Click to view all websites"
                         >
                             {websites.map((site, index) => (
