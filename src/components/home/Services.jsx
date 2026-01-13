@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Services = () => {
     const services = [
@@ -32,19 +33,73 @@ const Services = () => {
         },
     ];
 
-    return (
-        <section className="md:py-15 relative">
-            {/* <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-slate-200 dark:bg-dark-card rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div> */}
+    // 1. Logic for Title Animation
+    const titleText = "Services";
+    const titleWords = titleText.split(" ");
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.1 }
+        }
+    };
+
+    const wordVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { type: "spring", damping: 12, stiffness: 100 }
+        }
+    };
+
+    // 2. Logic for Card Animation (Staggered Entrance)
+    const cardVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: (i) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: i * 0.1, // Staggers the cards based on their index
+                duration: 0.05,
+                ease: "easeOut"
+            }
+        })
+    };
+
+    return (
+        <section className="py-20 md:py-32 relative overflow-hidden">
             <div className="container mx-auto px-4 max-w-6xl relative z-10">
-                <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Services</h2>
+
+                {/* ANIMATED HEADING */}
+                <div className="mb-16 text-center">
+                    <motion.h2
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 flex justify-center gap-x-[0.3em]"
+                    >
+                        {titleWords.map((word, index) => (
+                            <motion.span key={index} variants={wordVariants} className="inline-block">
+                                {word}
+                            </motion.span>
+                        ))}
+                    </motion.h2>
+                    <div className="w-20 h-1.5 bg-slate-900 dark:bg-white mx-auto rounded-full mt-2" />
                 </div>
 
+                {/* ANIMATED SERVICES GRID */}
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
                     {services.map((service, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            custom={index} // Pass index for stagger
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
                             className="p-8 rounded-2xl transition-all duration-300 group
                                 bg-neutral-50/40 backdrop-blur-md border border-slate-200/50 shadow-sm
                                 hover:shadow-xl hover:bg-white/60
@@ -57,7 +112,7 @@ const Services = () => {
                             <p className="text-slate-600 dark:text-neutral-400 leading-relaxed">
                                 {service.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
