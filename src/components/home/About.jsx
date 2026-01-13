@@ -1,4 +1,5 @@
 import React from 'react';
+import resume from '../../assets/Johnrey_Mansilungan_Resume.pdf';
 
 const About = () => {
     return (
@@ -14,6 +15,16 @@ const About = () => {
                     <p className="text-xl text-slate-600 dark:text-neutral-400 mb-10">
                         I focus on clean storytelling, strong pacing, and edits that feel intentional and professional. My goal is to help creators and brands communicate clearly without the clutter.
                     </p>
+                </div>
+
+                <div className="mt-8">
+                    <a
+                        href={resume}
+                        download="Johnrey_Mansilungan_Resume.pdf"
+                        className="inline-block px-8 py-3 bg-slate-900 text-white dark:bg-white dark:text-slate-900 font-medium rounded-lg hover:bg-slate-800 dark:hover:bg-neutral-200 transition-colors duration-300"
+                    >
+                        Download Resume
+                    </a>
                 </div>
             </div>
         </section>
