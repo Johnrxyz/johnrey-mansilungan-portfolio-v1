@@ -4,6 +4,7 @@ import VideoSection from '../components/portfolio/VideoSection';
 const Videos = () => {
     const shortFormVideos = [
         { title: "Sample Edit", description: "Clean and professional edit, focused on first 3s pacing.", videoId: "MU-IzW6s_Zk" },
+        { title: "Long-Form Before and After", description: "Before and after editing of a long-form video", videoId: "FWQvKx3kwaQ" },
     ];
 
     const longFormVideos = [
