@@ -3,6 +3,7 @@ import VideoSection from '../components/portfolio/VideoSection';
 
 const Videos = () => {
     const shortFormVideos = [
+        { title: "Edit timeline for Jed in Tech @tiktok", description: "Clean and professional edit, focused on first 3s pacing.", videoId: "iMeSsNBRGI8" },
         { title: "Sample Edit", description: "Clean and professional edit, focused on first 3s pacing.", videoId: "MU-IzW6s_Zk" },
         { title: "Long-Form Before and After", description: "Before and after editing of a long-form video", videoId: "FWQvKx3kwaQ" },
     ];
@@ -17,6 +18,7 @@ const Videos = () => {
         { title: "ENCOMIENDA SYSTEM (2023) - Trailer", description: "Cinematic color grading, fast-paced editing, sound design, trailer", videoId: "z05GsBQIL8Y" },
     ];
     const shortFilms = [
+        { title: "ROOM 7 (2026) - A Short Film", description: "Horror Thriller, VFX, Cinematic color grading, fast-paced editing, and sound design.", videoId: "e1hbmSWAFa0" },
         { title: "ALAS (2025) - Full Short Film", description: "VFX-filled, Cinematic color grading, fast-paced editing, and sound design.", videoId: "rhkhQFhyap0" },
         { title: "A VERY SPECIAL BUSINESS (2023)", description: "Cinematic color grading and sound design.", videoId: "8MeiCdjfaJI" },
     ];
