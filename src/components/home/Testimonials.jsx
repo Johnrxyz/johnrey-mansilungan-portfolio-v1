@@ -19,12 +19,12 @@ const Testimonials = () => {
             text: "Yung Gawa ni johnrey ay napaka ganda Madaling intindihin yung website na ginawa nya para sa aking Business na Art's and craft, nagustohan korin yung phone version nung website at yung pc Napaka linaw nung mga pictures, overall presentation napaka Angas 👌🏻😌",
             translation: "Johnrey's work is extremely beautiful. The website he created for my Arts and Crafts business is easy to understand. I also loved the phone and PC versions. The pictures are very clear, overall presentation is very cool."
         },
-        {
-            name: "Anton",
-            role: "Armor Sin Limites Founder",
-            projectType: "E-Commerce Website",
-            text: "Solid work"
-        },
+        // {
+        //     name: "Anton",
+        //     role: "Armor Sin Limites Founder",
+        //     projectType: "E-Commerce Website",
+        //     text: "Solid work"
+        // },
     ];
 
     // Animation Configs
