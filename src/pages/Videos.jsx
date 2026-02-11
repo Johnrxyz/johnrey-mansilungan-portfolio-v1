@@ -9,6 +9,7 @@ const Videos = () => {
     ];
 
     const longFormVideos = [
+        { title: "Talking Head", description: "A minimalist talking head video tailored for maximum retention.", videoId: "1J9X_-fbadak9C3synLwgy8sYjQPVX5-2", platform: "drive" },
         { title: "Interview", description: "Full episode edit with multi-cam switching with minimal visuals for maximum impact retention.", videoId: "HdQS5y7MSgw" },
     ];
 
@@ -44,6 +45,13 @@ const Videos = () => {
             />
 
             <VideoSection
+                title="Podcast & Long-Form"
+                description="Narrative-driven edits for YouTube and platforms."
+                videos={longFormVideos}
+                type="grid"
+            />
+
+            <VideoSection
                 title="Short Films"
                 description="Focused concept, relatable characters, a tight script, strong visual storytelling, effective sound/music, clean editing, and a powerful ending that delivers a clear theme and emotional impact."
                 videos={shortFilms}
@@ -57,12 +65,6 @@ const Videos = () => {
                 type="grid"
             />
 
-            <VideoSection
-                title="Podcast & Long-Form"
-                description="Narrative-driven edits for YouTube and platforms."
-                videos={longFormVideos}
-                type="grid"
-            />
         </>
     );
 };

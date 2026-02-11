@@ -1,7 +1,13 @@
 import React from 'react';
 
-const VideoCard = ({ title, description, videoId, aspectRatio = '16/9' }) => {
+const VideoCard = ({ title, description, videoId, platform = 'youtube', aspectRatio = '16/9' }) => {
 
+    const getEmbedUrl = () => {
+        if (platform === 'drive') {
+            return `https://drive.google.com/file/d/${videoId}/preview`;
+        }
+        return `https://www.youtube.com/embed/${videoId}`;
+    };
 
     return (
         <div className="flex flex-col gap-3 group">
@@ -12,7 +18,7 @@ const VideoCard = ({ title, description, videoId, aspectRatio = '16/9' }) => {
             >
                 <iframe
                     className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${videoId}`}
+                    src={getEmbedUrl()}
                     title={title}
                     loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
