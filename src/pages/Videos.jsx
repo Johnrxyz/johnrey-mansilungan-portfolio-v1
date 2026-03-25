@@ -9,7 +9,8 @@ const Videos = () => {
     ];
 
     const longFormVideos = [
-        { title: "Talking Head", description: "A minimalist talking head video tailored for maximum retention.", videoId: "1J9X_-fbadak9C3synLwgy8sYjQPVX5-2", platform: "drive" },
+        { title: "AI Talking Head", description: "AI generated talking head video using HeyGen, enhanced in DaVinci Resolve.", videoId: "GhEgwK9jgmw" },
+        { title: "Talking Head", description: "A minimalist talking head video tailored for maximum retention.", videoId: "10A7GG8Rj-kY" },
         { title: "Interview", description: "Full episode edit with multi-cam switching with minimal visuals for maximum impact retention.", videoId: "HdQS5y7MSgw" },
     ];
 

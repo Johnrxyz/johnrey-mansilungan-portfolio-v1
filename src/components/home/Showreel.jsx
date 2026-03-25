@@ -5,11 +5,13 @@ import Button from '../ui/Button';
 import aaronImg from '../../assets/aaron.png';
 import meImg from '../../assets/me.png';
 import aslImg from '../../assets/asl.png';
+import trainingImg from '../../assets/trainingHub.png';
 
 const websites = [
     { title: "Artist/Architecture Portfolio", image: aaronImg },
     { title: "My Portfolio Website", image: meImg },
-    { title: "Armor Sin Limites (E-Commerce)", image: aslImg }
+    { title: "Armor Sin Limites (E-Commerce)", image: aslImg },
+    { title: "AI Training Hub for employees", image: trainingImg }
 ];
 
 const Showreel = () => {

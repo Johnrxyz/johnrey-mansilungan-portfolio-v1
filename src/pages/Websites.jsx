@@ -1,6 +1,7 @@
 import aaronImg from '../assets/aaron.png';
 import meImg from '../assets/me.png';
 import aslImg from '../assets/asl.png';
+import trainingImg from '../assets/trainingHub.png';
 
 const WebsiteCard = ({ title, description, image, techStack, link }) => (
     <a href={link} target="_blank" rel="noopener noreferrer" className="block group">
@@ -33,6 +34,13 @@ const WebsiteCard = ({ title, description, image, techStack, link }) => (
 
 const Websites = () => {
     const websites = [
+        // {
+        //     title: "AI Training Hub for employees",
+        //     description: "A training hub for employees for easier onboarding and compliance training.",
+        //     techStack: ["React", "Vite", "Supabase", "Vercel"],
+        //     link: "https://caringhandllctraininghub.vercel.app/",
+        //     image: trainingImg
+        // },
         {
             title: "Artist/Architecture Student Portfolio Website",
             description: "A minimalist portfolio built for an artist.",
