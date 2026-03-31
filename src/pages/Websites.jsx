@@ -34,13 +34,13 @@ const WebsiteCard = ({ title, description, image, techStack, link }) => (
 
 const Websites = () => {
     const websites = [
-        // {
-        //     title: "AI Training Hub for employees",
-        //     description: "A training hub for employees for easier onboarding and compliance training.",
-        //     techStack: ["React", "Vite", "Supabase", "Vercel"],
-        //     link: "https://caringhandllctraininghub.vercel.app/",
-        //     image: trainingImg
-        // },
+        {
+            title: "AI Training Hub for employees (stbusinessconsulting client)",
+            description: "A training hub for employees for easier onboarding and compliance training.",
+            techStack: ["React", "Vite", "Supabase", "Vercel"],
+            link: "https://caringhandllctraininghub.vercel.app/",
+            image: trainingImg
+        },
         {
             title: "Artist/Architecture Student Portfolio Website",
             description: "A minimalist portfolio built for an artist.",
