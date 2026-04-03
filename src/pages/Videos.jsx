@@ -10,7 +10,7 @@ const Videos = () => {
 
     const longFormVideos = [
         { title: "AI Talking Head", description: "AI generated talking head video using HeyGen, enhanced in DaVinci Resolve.", videoId: "GhEgwK9jgmw" },
-        { title: "Talking Head", description: "A minimalist talking head video tailored for maximum retention.", videoId: "10A7GG8Rj-kY" },
+        { title: "Talking Head", description: "A minimalist talking head video tailored for maximum retention.", videoId: "0A7GG8Rj-kY" },
         { title: "Interview", description: "Full episode edit with multi-cam switching with minimal visuals for maximum impact retention.", videoId: "HdQS5y7MSgw" },
     ];
 
@@ -39,17 +39,17 @@ const Videos = () => {
             </div>
 
             <VideoSection
-                title="Short-Form Content"
-                description="Reels, TikToks, and Shorts designed for mobile retention."
-                videos={shortFormVideos}
-                type="shorts"
-            />
-
-            <VideoSection
                 title="Podcast & Long-Form"
                 description="Narrative-driven edits for YouTube and platforms."
                 videos={longFormVideos}
                 type="grid"
+            />
+
+            <VideoSection
+                title="Short-Form Content"
+                description="Reels, TikToks, and Shorts designed for mobile retention."
+                videos={shortFormVideos}
+                type="shorts"
             />
 
             <VideoSection
