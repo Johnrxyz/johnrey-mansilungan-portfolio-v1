@@ -13,10 +13,14 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (location.state?.scrollTo === 'contact') {
-            const contactSection = document.getElementById('contact');
-            if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
+        const scrollToId = location.state?.scrollTo;
+        if (scrollToId) {
+            const section = document.getElementById(scrollToId);
+            if (section) {
+                // Wait a bit for the page to render if needed
+                setTimeout(() => {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
                 // Clear state
                 navigate('/', { replace: true, state: {} });
             }

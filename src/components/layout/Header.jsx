@@ -12,16 +12,20 @@ const Header = () => {
         { name: 'Home', path: '/' },
         { name: 'Videos', path: '/videos' },
         { name: 'Websites', path: '/websites' },
+        { name: 'Testimonials', sectionId: 'testimonials' },
+        { name: 'Contact', sectionId: 'contact' },
     ];
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-    const handleContactClick = () => {
+    const handleNavClick = (item) => {
         setIsMenuOpen(false);
-        if (location.pathname === '/') {
-            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            navigate('/', { state: { scrollTo: 'contact' } });
+        if (item.sectionId) {
+            if (location.pathname === '/') {
+                document.getElementById(item.sectionId)?.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                navigate('/', { state: { scrollTo: item.sectionId } });
+            }
         }
     };
 
@@ -39,25 +43,29 @@ const Header = () => {
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center gap-8">
                     {navItems.map((item) => (
-                        <NavLink
-                            key={item.path}
-                            to={item.path}
-                            className={({ isActive }) =>
-                                `text-sm font-medium transition-colors hover:text-slate-900 dark:hover:text-white ${isActive
-                                    ? 'text-slate-900 dark:text-white'
-                                    : 'text-slate-500 dark:text-slate-400'
-                                }`
-                            }
-                        >
-                            {item.name}
-                        </NavLink>
+                        item.path ? (
+                            <NavLink
+                                key={item.path}
+                                to={item.path}
+                                className={({ isActive }) =>
+                                    `text-sm font-medium transition-colors hover:text-slate-900 dark:hover:text-white ${isActive
+                                        ? 'text-slate-900 dark:text-white'
+                                        : 'text-slate-500 dark:text-slate-400'
+                                    }`
+                                }
+                            >
+                                {item.name}
+                            </NavLink>
+                        ) : (
+                            <button
+                                key={item.name}
+                                onClick={() => handleNavClick(item)}
+                                className="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
+                            >
+                                {item.name}
+                            </button>
+                        )
                     ))}
-                    <button
-                        onClick={handleContactClick}
-                        className="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
-                    >
-                        Contact
-                    </button>
                     <div className="pl-4 border-l border-gray-200 dark:border-slate-800">
                         <ThemeToggle />
                     </div>
@@ -81,26 +89,30 @@ const Header = () => {
                 <div className="md:hidden absolute top-16 left-0 right-0 bg-white dark:bg-dark-bg border-b border-gray-100 dark:border-slate-800 p-4 shadow-lg">
                     <nav className="flex flex-col gap-4">
                         {navItems.map((item) => (
-                            <NavLink
-                                key={item.path}
-                                to={item.path}
-                                onClick={() => setIsMenuOpen(false)}
-                                className={({ isActive }) =>
-                                    `text-lg font-medium transition-colors ${isActive
-                                        ? 'text-slate-900 dark:text-white'
-                                        : 'text-slate-500 dark:text-neutral-400'
-                                    }`
-                                }
-                            >
-                                {item.name}
-                            </NavLink>
+                            item.path ? (
+                                <NavLink
+                                    key={item.path}
+                                    to={item.path}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={({ isActive }) =>
+                                        `text-lg font-medium transition-colors ${isActive
+                                            ? 'text-slate-900 dark:text-white'
+                                            : 'text-slate-500 dark:text-neutral-400'
+                                        }`
+                                    }
+                                >
+                                    {item.name}
+                                </NavLink>
+                            ) : (
+                                <button
+                                    key={item.name}
+                                    onClick={() => handleNavClick(item)}
+                                    className="text-lg font-medium text-left text-slate-500 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
+                                >
+                                    {item.name}
+                                </button>
+                            )
                         ))}
-                        <button
-                            onClick={handleContactClick}
-                            className="text-lg font-medium text-left text-slate-500 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white transition-colors"
-                        >
-                            Contact
-                        </button>
                     </nav>
                 </div>
             )}

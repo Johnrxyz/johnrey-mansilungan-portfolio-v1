@@ -13,11 +13,19 @@ const Testimonials = () => {
 
     const testimonials = [
         {
+            name: "Gerphil Flores-Libanan",
+            role: "Vocal Coach / 2015 Asia's Got Talent second runner-up",
+            projectType: "Video Editing",
+            text: "I had a wonderful experience working with Johnrey. He is very professional, creative, and easy to work with. He consistently delivered high-quality edits, with great attention to detail that truly elevated the content. His reliability and positive attitude made the collaboration smooth and enjoyable. Highly recommended for anyone looking for a skilled and dedicated video editor! 😊",
+            link: "https://www.facebook.com/gerphilgeraldine",
+        },
+        {
             name: "Aaron Ocaya",
             role: "Artist/Architecture Student",
             projectType: "Website Portfolio",
             text: "Yung Gawa ni johnrey ay napaka ganda Madaling intindihin yung website na ginawa nya para sa aking Business na Art's and craft, nagustohan korin yung phone version nung website at yung pc Napaka linaw nung mga pictures, overall presentation napaka Angas 👌🏻😌",
-            translation: "Johnrey's work is extremely beautiful. The website he created for my Arts and Crafts business is easy to understand. I also loved the phone and PC versions. The pictures are very clear, overall presentation is very cool."
+            translation: "Johnrey's work is extremely beautiful. The website he created for my Arts and Crafts business is easy to understand. I also loved the phone and PC versions. The pictures are very clear, overall presentation is very cool.",
+            link: 'https://aaronocaya.netlify.app/'
         },
         // {
         //     name: "Anton",
@@ -58,7 +66,7 @@ const Testimonials = () => {
     };
 
     return (
-        <section className="py-20 mb-15">
+        <section id="testimonials" className="py-20 mb-15">
             <div className="container mx-auto px-4 max-w-6xl">
 
                 {/* ANIMATED HEADER */}
@@ -102,9 +110,36 @@ const Testimonials = () => {
                             <div>
                                 <div className="flex justify-between items-start mb-4">
                                     <div className="text-4xl text-blue-500/30 font-serif leading-none">“</div>
-                                    <span className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">
-                                        {item.projectType}
-                                    </span>
+                                    {item.link ? (
+                                        <a
+                                            href={item.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-colors flex items-center gap-1.5 group/link"
+                                        >
+                                            {item.projectType}
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="12"
+                                                height="12"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                strokeWidth="2.5"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                className="opacity-60 group-hover/link:opacity-100 transition-opacity"
+                                            >
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                        </a>
+                                    ) : (
+                                        <span className="px-3 py-1 text-xs font-medium rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300">
+                                            {item.projectType}
+                                        </span>
+                                    )}
                                 </div>
                                 <p className="text-slate-700 dark:text-neutral-300 italic leading-relaxed mb-4">
                                     {item.text}
