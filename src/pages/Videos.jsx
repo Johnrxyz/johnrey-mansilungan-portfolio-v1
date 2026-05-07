@@ -22,7 +22,7 @@ const Videos = () => {
     const shortFilms = [
         { title: "ROOM 7 (2026) - A Short Film", description: "Horror Thriller, VFX, Cinematic color grading, fast-paced editing, and sound design.", videoId: "e1hbmSWAFa0" },
         { title: "ALAS (2025) - Full Short Film", description: "VFX-filled, Cinematic color grading, fast-paced editing, and sound design.", videoId: "rhkhQFhyap0" },
-        { title: "A VERY SPECIAL BUSINESS (2023)", description: "Cinematic color grading and sound design.", videoId: "8MeiCdjfaJI" },
+        { title: "Ang Himala sa Lourdes (2026)", description: "A drama short film about faith and miracles.", videoId: "kBtLkwVDHz0" },
     ];
 
     return (
