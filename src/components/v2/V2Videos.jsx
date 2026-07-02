@@ -8,13 +8,19 @@ const allVideos = {
         tag: 'YouTube · Retention',
         videos: [
             {
+                title: 'VSL AD',
+                description: 'Video Sales Letter ad edited for retention and conversions.',
+                videoId: 'K7h9byvdT28',
+                aspect: '16/9',
+            },
+            {
                 title: 'AI Talking Head',
                 description: 'AI generated talking head video using HeyGen, enhanced in DaVinci Resolve.',
                 videoId: 'GhEgwK9jgmw',
                 aspect: '16/9',
             },
             {
-                title: 'Talking Head',
+                title: 'VSL',
                 description: 'A minimalist talking head video tailored for maximum retention.',
                 videoId: '0A7GG8Rj-kY',
                 aspect: '16/9',
