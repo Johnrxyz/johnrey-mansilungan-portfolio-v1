@@ -23,7 +23,7 @@ const V2Layout = ({ children }) => {
             const saved = localStorage.getItem('v2Theme');
             if (saved === 'dark' || saved === 'light') return saved;
         }
-        return 'light';
+        return 'dark';
     });
 
     const isDark = theme === 'dark';
