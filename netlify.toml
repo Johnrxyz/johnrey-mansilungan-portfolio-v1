@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  # BREVO_SENDER_EMAIL is intentionally a public contact address that appears
+  # in multiple source files. Omit it from secrets scanning to avoid false positives.
+  SECRETS_SCAN_OMIT_KEYS = "BREVO_SENDER_EMAIL"
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
