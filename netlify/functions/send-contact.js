@@ -1,5 +1,5 @@
 /* global process */
-// Netlify Function (v2) — relays the portfolio contact form through Brevo's
+// Netlify Function — relays the portfolio contact form through Brevo's
 // transactional email API. The API key stays server-side; it is never shipped
 // to the browser.
 //
@@ -12,11 +12,11 @@
 
 const TO_DEFAULT = 'mansilungan.johnrey.dll@gmail.com';
 
-const json = (status, body) =>
-    new Response(JSON.stringify(body), {
-        status,
-        headers: { 'content-type': 'application/json' },
-    });
+const json = (statusCode, body) => ({
+    statusCode,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+});
 
 const escapeHtml = (s = '') =>
     s
@@ -26,12 +26,14 @@ const escapeHtml = (s = '') =>
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
 
-export default async (req) => {
-    if (req.method !== 'POST') return json(405, { error: 'Method not allowed.' });
+exports.handler = async (event) => {
+    if (event.httpMethod !== 'POST') {
+        return json(405, { error: 'Method not allowed.' });
+    }
 
     let data;
     try {
-        data = await req.json();
+        data = JSON.parse(event.body || '{}');
     } catch {
         return json(400, { error: 'Invalid request.' });
     }
