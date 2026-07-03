@@ -116,6 +116,16 @@ body {
   animation: v2-float 5s ease-in-out infinite;
 }
 
+@keyframes v2-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.v2-spin {
+  animation: v2-spin 0.7s linear infinite;
+}
+
 /* ── V2 CUSTOM CURSOR ── */
 
 @media (pointer: fine) {
@@ -258,6 +268,14 @@ body {
   }
 
   .v2-contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .v2-testimonials-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .v2-form-row {
     grid-template-columns: 1fr !important;
   }
 

@@ -39,6 +39,7 @@ const V2Layout = ({ children }) => {
         { label: 'videos', href: '#v2-videos' },
         { label: 'web dev', href: '#v2-websites' },
         { label: 'stack', href: '#v2-stack' },
+        { label: 'testimonials', href: '#v2-testimonials' },
         { label: 'contact', href: '#v2-contact' },
     ];
 
