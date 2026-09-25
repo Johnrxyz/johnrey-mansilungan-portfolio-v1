@@ -1,10 +1,13 @@
 import React from 'react';
 
-const VideoCard = ({ title, description, videoId, platform = 'youtube', aspectRatio = '16/9' }) => {
+const VideoCard = ({ title, description, videoId, platform = 'youtube', aspectRatio = '16/9', cloudName }) => {
 
     const getEmbedUrl = () => {
         if (platform === 'drive') {
             return `https://drive.google.com/file/d/${videoId}/preview`;
+        }
+        if (platform === 'cloudinary') {
+            return `https://player.cloudinary.com/embed/?cloud_name=${cloudName}&public_id=${videoId}&player[autoplay]=false&player[muted]=false`;
         }
         return `https://www.youtube.com/embed/${videoId}`;
     };
@@ -21,7 +24,7 @@ const VideoCard = ({ title, description, videoId, platform = 'youtube', aspectRa
                     src={getEmbedUrl()}
                     title={title}
                     loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                     allowFullScreen
                 ></iframe>
             </div>

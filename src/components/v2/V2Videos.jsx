@@ -37,7 +37,7 @@ const allVideos = {
         label: 'Short-Form Content',
         tag: 'Reels · TikTok · Shorts',
         videos: [
-            { title: "AI Short Form AD", description: "Clean and professional edit, focused on first 3s pacing.", videoId: "-dad6b2Kx1Y" },
+            { title: "AI Integration AD", description: "AI-generated advertisement showcasing seamless integration.", videoId: "AI_Integration_AD_1080p", platform: "cloudinary", cloudName: "dfp5hfvhl", aspect: "9/16" },
             {
                 title: 'Edit timeline for Jed in Tech @tiktok',
                 description: 'Clean and professional edit, focused on first 3s pacing.',
@@ -152,7 +152,11 @@ const V2VideoCard = ({ video, isShort, index }) => {
                             border: 'none',
                             display: 'block',
                         }}
-                        src={`https://www.youtube.com/embed/${video.videoId}`}
+                        src={
+                            video.platform === 'cloudinary'
+                                ? `https://player.cloudinary.com/embed/?cloud_name=${video.cloudName}&public_id=${video.videoId}`
+                                : `https://www.youtube.com/embed/${video.videoId}`
+                        }
                         title={video.title}
                         loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

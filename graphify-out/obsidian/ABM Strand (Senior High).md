@@ -1,0 +1,16 @@
+---
+source_file: "public/Johnrey_Mansilungan_Resume.pdf"
+type: "concept"
+community: "Résumé: Experience & Skills"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Rsum_Experience__Skills
+---
+
+# ABM Strand (Senior High)
+
+## Connections
+- [[Lucena Dalahican National High School]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Rsum_Experience__Skills

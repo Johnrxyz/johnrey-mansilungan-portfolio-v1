@@ -24,7 +24,7 @@ const VideoSection = ({ title, description, videos, type = 'grid' }) => {
                         <VideoCard
                             key={index}
                             {...video}
-                            aspectRatio={type === 'shorts' ? '9/16' : '16/9'}
+                            aspectRatio={video.aspectRatio ?? (type === 'shorts' ? '9/16' : '16/9')}
                         />
                     ))}
                 </div>
